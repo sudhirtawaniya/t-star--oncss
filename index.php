@@ -19,54 +19,44 @@
 <li>
 <img src="tawaniya_family.png"width="80"></img>
 
+<h2 style="color:white"></h2>
+<div class="flex searchcontrol">
+<input type="search" onkeyup="search()"></input>
+ <br><div  id="searchiteams"></br>
 
-<input type="search"/>
-<span class="float">
+ 
+ </div>
+ </div>
+ 
+<span class="float flex">
  <a href="reg.html" target="_blank">Login</a>
  <a href="reg.html" target="_blank">signup</a>
  </span>
  </li>
+
 </ul>
 
 </nav>
 
 </section>
 <section>
-
-<img src="Banners\im1.jpg" width="100%" height="300vh" ></img>
 <div class="radio-g">
 <input type="radio" checked name="ban-btn"/>
 <input type="radio" name="ban-btn"/>
 <input type="radio" name="ban-btn"/>
+<input type="radio" name="ban-btn"/>
 </div>
+<div class="banner">
+<img src="Banners\im1.jpg" width="100%" height="100%"></img>
+<img src="Banners\ban1.jpg" width="100%" height="100%" ></img>
+<img src="Banners\ban2.jpg" width="100%" height="100%"></img>
+<img src="Banners\ban3.jpg" width="100%" height="100%" ></img>
+</div>
+
 </section>
-<section>
-<h1 class="detailsofpro">T-shirt</h1>
-<?php 
-$conn=mysqli_connect('localhost','root','','Tstar') or die("connection failed");
-$query="SELECT * FROM product";
-$result=mysqli_query($conn,$query);
-while($product=mysqli_fetch_assoc($result)){?>
-	
+<section id="product">
 
-
-
-<div class="product flex">
-
-<div class="card ">
-<img src="card-rec/<?php echo $product['image']?>" width="200px"/>
-<h4><?php echo $product['name'] ?> </h4>
-<span > <?php echo $product['price'] ?>rs <del> <?php echo $product['original price']?>rs</del></span></br>
-<input type="button" value="Add to Cart"/>
-<input type="button"value="Buy"/>
-</div>
-
-<?php }
-
-?>
-
-
-</div>
 </section>
 </body>
+<script src="wall.js"></script>
 </html>
