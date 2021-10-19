@@ -15,7 +15,7 @@ font-family: 'Gemunu Libre', 'sans-serif';
 
 
 }
-li>a[href="#"],li>input{
+li>a[href="reg.html"],li>input{
 	float:left;
 	
 	position:relative;
@@ -40,7 +40,7 @@ li>img{
 	float:left;
 }
 
-a[href="#"]{
+a[href="reg.html"]{
 	display:inline;
 margin:5px; 
 font-size:20px;
