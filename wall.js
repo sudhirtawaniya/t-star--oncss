@@ -8,8 +8,8 @@ const xml=new XMLHttpRequest();
 function chnbanner(a){
 	let k=-(a*100)
 	console.log("Enter "+a+" "+k);
-	let s=slide[0].style.transform ="translateX("+k+"%)";
-	alert(s);
+	slide1[a+1].style.transform ="translateX("+k+"%)";
+	
 }
 function search(){
 

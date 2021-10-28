@@ -13,38 +13,35 @@
 <body>
 <section>
 
-<nav class="nav">
+<nav class="nav flex">
 
-<ul>
-<li>
+
 <img src="tawaniya_family.png"width="80"></img>
 
-<h2 style="color:white"></h2>
-<div class="flex searchcontrol">
+
+<div class="searchcontrol">
 <input type="search" onkeyup="search()"></input>
- <br><div  id="searchiteams"></br>
+ <div  id="searchiteams">
 
  
  </div>
  </div>
  
-<span class="float flex">
+<div class="reg">
  <a href="reg.html" target="_blank">Login</a>
  <a href="reg.html" target="_blank">signup</a>
- </span>
- </li>
+ </div>
 
-</ul>
 
 </nav>
 
 </section>
 <section>
 <div class="radio-g">
-<input type="radio" onclick="chnbanner(1)" checked name="ban-btn"/>
-<input type="radio" onclick="chnbanner(2)" name="ban-btn"/>
-<input type="radio" onclick="chnbanner(3)"name="ban-btn"/>
-<input type="radio" onclick="chnbanner(4)" name="ban-btn"/>
+<input type="radio" onclick="chnbanner(0)" checked name="ban-btn"/>
+<input type="radio" onclick="chnbanner(1)" name="ban-btn"/>
+<input type="radio" onclick="chnbanner(2)"name="ban-btn"/>
+<input type="radio" onclick="chnbanner(3)" name="ban-btn"/>
 </div>
 <div class="banner">
 <img src="Banners\im1.jpg" width="100%" height="100%"></img>
