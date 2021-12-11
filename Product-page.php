@@ -1,52 +1,25 @@
-
 <?php 
+require("connection.inc.php");
+$id=safe_value($_GET['id']);
 
+$query="SELECT * FROM product WHERE id={$id}";
+
+$result=mysqli_query($conn,$query);
+require("header.inc.php");
 ?>
-<!DOCTYPE html>
-<html>
 <head>
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wallpaper</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 <link href="product-page.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-</head>
-<body>
-<section>
-
-<nav class="nav flex">
-
-
-<img src="tawaniya_family.png"width="80"></img>
-
-
-<div class="searchcontrol">
-<input type="search" onkeyup="search()"></input>
- <br><div  id="searchiteams">
-
- 
- </div>
- </div>
- 
-<div class="reg" >
- <a href="reg.html" target="_blank">Login</a>
- <a href="reg.html" target="_blank">signup</a>
- </div>
-
-
-</nav>
-
-</section>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+	  </head>
 <section>
 <div class="container flex">
 <div class="flex box">
-<div class="Image">
-<img src="card-rec/t2.png" class="main-img" width="350" height="500"></img>
+<div class="Image"><?php
+while($product=mysqli_fetch_assoc($result)){?>
+ 
+
+<img src="card-rec/<?php echo $product['image'];?>" class="main-img" width="350" height="500"></img>
+
 <div class="ot-img">
 <img src="card-rec/t2.png" class="oti" width="50" tabindex="0" height="70"></img>
 <img src="card-rec/t2.png" class="oti" width="50" tabindex="1" height="70"></img>
@@ -56,7 +29,7 @@
 </div>
 
 <div class="product-info">
-<h1>Blackish T-shirt </h1>
+<h1><?php echo $product['name'];?></h1>
 <span class="material-icons"style="color:orange">
 star
 </span><span class="material-icons"style="color:orange">
@@ -68,7 +41,7 @@ star
 </span><span class="material-icons"style="color:orange">
 star
 </span>
-<h2>$299</h2>
+<h2><?php echo '$'.$product['price'];?></h2>
 <div class="des">
 <h4>This is our Tshirt esi thisirt wesi tshirt wo tshirt pta nhi kesi tshirt but tshirt by the way this is tshirt can you know about tshirt sudhir tawaniya and our team ready to develope a e commerce website which is helpful for everyone who try to buy some product or sell some product </h4>
 </div>
@@ -78,6 +51,8 @@ star
 
 </div>
 </div>
+<?php } ?>
 </section>
+<script src="search.inc.js"></script>
 </body>
 </html>

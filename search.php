@@ -1,5 +1,5 @@
 <?php if((isset($_GET['a']))&&(!empty($_GET['a']))){
-	$conn=mysqli_connect('localhost','root','','Tstar') or die("connection failed");
+	require("connection.inc.php");
 	$a=$_GET['a'];
 	$search="SELECT name FROM product WHERE name LIKE '{$a}%'";
 	$searchresult=mysqli_query($conn,$search);

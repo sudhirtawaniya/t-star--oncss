@@ -1,3 +1,13 @@
+<?php
+require("connection.inc.php");
+if(isset("Signup")){
+$username=safe_value($_POST['username']);
+$password=safe_value($_POST['password']);
+$query="SELECT username FROM userecoard WHERE username='{$username}'AND password='{$password}'";
+}
+
+?>
+
 <!doctype html>
 <html>
 <head>
