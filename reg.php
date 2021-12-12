@@ -1,4 +1,11 @@
-
+<?php
+session_start();
+if(isset($_GET['logout'])&& $_GET['logout']==true){
+	    session_unset();
+	session_destroy();
+	
+}
+?>
 <!doctype html>
 <html>
 <head>
@@ -22,7 +29,7 @@ Welcome To Tawaniyas
 <div class="flex input-line" >
 
 <form action="#" method="POST" >
-<div id="worng-pass"></div></br>
+<div id="worng-pass"></div></br></br></br>
 <input type="text" name="name"class="SignupIteam" required /><p class="label SignupIteam"tabindex=1>Name</p></br>
 <input type="text" name="contact"  class="SignupIteam"  required /><p class="label SignupIteam"tabindex=2>Email or Phone</p></br>
 

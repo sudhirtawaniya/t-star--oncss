@@ -8,6 +8,7 @@ function hide(){
 	label[i].required=false;
 	label[i].style.display="none";
 	}
+	document.getElementById("worng-pass").style.display="none";
 	submitbutton.value="Login";
 	submitbutton.setAttribute('name','Login');
 	regdetails.innerHTML="<p>Don't have an account<a href='#' onclick='show()'>Signup</a></p>";
@@ -18,7 +19,9 @@ function show(){
 	for(let i=0;i<label.length;i++){
 		label[i].required=true;
 	label[i].style.display="inline-block";
+	
 	}
+	document.getElementById("worng-pass").style.display="none";
 	submitbutton.value="Signup";
 	submitbutton.setAttribute('name','Signup');
 	regdetails.innerHTML='<div class="regdetails"><p>Already have an account?<a href="#" onclick="hide()">Login</a></p></div>';
@@ -40,6 +43,7 @@ xml.onload=function(){
 	}
 	else{
 	document.getElementById("worng-pass").innerHTML=xml.responseText;
+	document.getElementById("worng-pass").style.display="block";
 	}
 	
 }

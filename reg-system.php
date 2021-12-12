@@ -1,11 +1,6 @@
 <?php
 require("connection.inc.php");
 session_start();
-if(isset($_GET['logout'])&& $_GET['logout']==true){
-     session_unset();
-	session_destroy();
-	
-}
 
 if(isset($_POST['Login'])&& $_POST['Login']=="Login"){
 	
@@ -40,7 +35,7 @@ if($result){
 	die();
 }
 else{
-	echo "ERROR";
+	echo "Username alreday exist pls change your username";
 }
 
 }
