@@ -20,12 +20,7 @@ while($product=mysqli_fetch_assoc($result)){?>
 
 <img src="card-rec/<?php echo $product['image'];?>" class="main-img" width="350" height="500"></img>
 
-<div class="ot-img">
-<img src="card-rec/t2.png" class="oti" width="50" tabindex="0" height="70"></img>
-<img src="card-rec/t2.png" class="oti" width="50" tabindex="1" height="70"></img>
-<img src="card-rec/t2.png" class="oti" width="50" tabindex="2" height="70"></img>
-<img src="card-rec/t2.png" class="oti" width="50" tabindex="3" height="70"></img>
-</div>
+
 </div>
 
 <div class="product-info">
@@ -45,7 +40,12 @@ star
 <div class="des">
 <h4>This is our Tshirt esi thisirt wesi tshirt wo tshirt pta nhi kesi tshirt but tshirt by the way this is tshirt can you know about tshirt sudhir tawaniya and our team ready to develope a e commerce website which is helpful for everyone who try to buy some product or sell some product </h4>
 </div>
-<input type="button" value="Add to Cart"/>
+<input type="button" id="btn<?php echo $product['id'];?>"value="Add to Cart" onclick="addcart(<?php echo $product['id'].',';?>'<?php
+
+if(isset($_SESSION['username'])&&$_SESSION['username']!=''){
+	echo $_SESSION['username'];
+}
+?>',this.id);"/>
 <input type="button"value="Buy"/>
 </div>
 

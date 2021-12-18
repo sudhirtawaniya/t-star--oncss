@@ -1,4 +1,5 @@
 let product=document.getElementById('product');
+let cart=document.getElementById('cart');
 
 let slideimg=document.querySelectorAll('img');
 let slide=document.getElementsByClassName('banner');
@@ -10,17 +11,9 @@ function chnbanner(a){
 	
 	
 			let pr=a*100;
-			console.log(pr);
+			
 		slide[0].style.right=pr.toString()+"%";
 		
-	
-	
-	
-	
-	
-	
-	
-	
 }
 
 

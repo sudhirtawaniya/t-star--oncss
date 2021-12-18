@@ -15,6 +15,7 @@ require("header.inc.php");
 <section id="product">
 
 </section>
+
 </body>
 <script src="search.inc.js"></script>
 <script src="wall.js"></script>

@@ -19,15 +19,14 @@ body{
 	border:none;
 	justify-content:space-between;
 	transition:0.2s;
+	margin-top:15%;
 }
 .product-info>input:hover{
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 	//transform:scale(1.01);
 	
 }
-div>input{
-	margin-top:15%;
-}
+
 .flex{
 	display:flex;
 	
@@ -70,16 +69,6 @@ div>input{
 	width:30%;
 	padding:7px;
 	
-}
-.ot-img{
-	margin-top:5px;
-	display:flex;
-	
-	justify-content:space-between;
-}
-.oti:hover{
-	display:inline;
-	outline:5px solid gray;
 }
 
 @media screen and (max-width:803px){
