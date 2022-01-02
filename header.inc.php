@@ -34,7 +34,8 @@ session_start();
 if(isset($_SESSION['username'])&&$_SESSION['username']!=""){
 	
 	echo '<a href="reg.php" target="_blank">'.$_SESSION["username"].'</a>
-    <a href="cart.php" id="cart" target="_blank">Cart</a>
+	 <a href="cart.php" target="_blank"><img src="nav-icon\addToCartIcon.png"width="40" alt="cart"  id="cart"></img>
+   </a>
 	<a href="reg.php?logout=true" >Logout</a> </div>';
 }
 

@@ -17,12 +17,6 @@ function addcart(id,username,btnid){
 xml.open('POST','cart-system.php',true);
 xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xml.onload=function(){
-	if(xml.responseText=="yes"){
-	cart.innerHTML=Number(cart.innerHTML)+1;
-	}
-	else{
-		console.log(xml.responseText);
-	}
 	
 }
 xml.send("product_id="+id+"&username="+username);

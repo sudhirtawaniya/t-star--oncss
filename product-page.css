@@ -23,7 +23,6 @@ body{
 }
 .product-info>input:hover{
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	//transform:scale(1.01);
 	
 }
 
@@ -70,7 +69,9 @@ body{
 	padding:7px;
 	
 }
-
+.detailsofpro{
+	 margin-top:7% !important;
+}
 @media screen and (max-width:803px){
 	.box{
 		width:100%;

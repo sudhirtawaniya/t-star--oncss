@@ -1,7 +1,9 @@
 <?php
 require("header.inc.php");
 ?>
-<head><link href="wall.css" rel="stylesheet" /></head>
+<head>
+<link href="banner.css" rel="stylesheet" />
+<link href="card.css" rel="stylesheet" /></head>
 <section>
 <div class="radio-g">
 <input type="radio" onclick="chnbanner(0)" checked name="ban-btn"/>
